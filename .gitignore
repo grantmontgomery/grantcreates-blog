@@ -1,9 +1,0 @@
-.env
-
-node_modules
-
-bin
-
-dist
-
-lib
