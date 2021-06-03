@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "allowJs":true,
+        "target":"es6",
+        "module": "ES6",
+        "moduleResolution": "node",
+        "strict": true,
+        "noImplicitAny": true,
+        "jsx": "react",
+        "isolatedModules": true,
+        "allowSyntheticDefaultImports": true,
+        "lib":[
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ]
+    },
+    "include": [
+        "src"
+    ]
+}
