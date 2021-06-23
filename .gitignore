@@ -7,3 +7,5 @@ bin
 dist
 
 lib
+
+yarn.lock
