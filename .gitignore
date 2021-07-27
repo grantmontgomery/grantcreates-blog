@@ -9,3 +9,5 @@ dist
 lib
 
 yarn.lock
+
+.git
