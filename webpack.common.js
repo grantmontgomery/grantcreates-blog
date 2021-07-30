@@ -6,14 +6,14 @@ module.exports = {
   entry: "./src/index.tsx",
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html"),
+      template: path.join(__dirname, "public", "index.html"),
     }),
   ],
   module: {
     rules: [
       {
         test: /\.(css|scss)$/i,
-        use: ["style-loader, css-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(js|jsx)?$/,
