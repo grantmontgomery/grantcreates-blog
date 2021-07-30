@@ -1,5 +1,22 @@
 import * as React from "react";
 import { App } from "./App";
+import {
+  InMemoryCache,
+  ApolloProvider,
+  ApolloClient,
+  gql,
+} from "@apollo/client";
 import ReactDOM from "react-dom";
 
-ReactDOM.render(<App></App>, document.getElementById("root"));
+const client = new ApolloClient({
+  uri: "",
+  cache: new InMemoryCache(),
+});
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App></App>
+  </ApolloProvider>,
+
+  document.getElementById("root")
+);
