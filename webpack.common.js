@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 require("dotenv").config();
 
 module.exports = {
@@ -8,9 +9,24 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
     }),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
+      {
+        test: /\.(css|scss)$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          { loader: "css-modules-typescript-loader" },
+        ],
+        include: path.join(__dirname, "src/components"),
+      },
       {
         test: /\.(css|scss)$/i,
         use: ["style-loader", "css-loader"],

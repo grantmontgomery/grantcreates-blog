@@ -1,0 +1,28 @@
+main {
+  height: fit-content;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1250px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.article-suggestions {
+  width: 30%;
+  position: relative;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+.top-article {
+  height: 500px;
+  background: #0f2027;
+}
