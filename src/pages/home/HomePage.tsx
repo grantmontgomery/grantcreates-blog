@@ -6,12 +6,12 @@ export const HomePage = () => {
   console.log(css);
   return (
     <React.Fragment>
-      <div className={css["content-wrapper"]}>
+      <div className={css.contentWrapper}>
         <main className={css.main}>
-          <section className={css["main-article"]}></section>
-          <section className={css["more-articles"]}></section>
+          <section className={css.topArticle}>Grant Creates Blog</section>
+          <section className={css.moreArticles}></section>
         </main>
-        <aside className={css["articles-aside"]}></aside>
+        <aside className={css.articlesAside}></aside>
       </div>
     </React.Fragment>
   );
