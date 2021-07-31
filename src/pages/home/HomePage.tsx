@@ -1,18 +1,17 @@
 import * as React from "react";
-import "./HomePage.css";
+// import "./HomePage.css";
+import css from "./HomePage.module.css";
 
 export const HomePage = () => {
+  console.log(css);
   return (
     <React.Fragment>
-      <header>
-        <nav></nav>
-      </header>
-      <div className="content-wrapper">
-        <main>
-          <section className="top-article"></section>
-          <section></section>
+      <div className={css["content-wrapper"]}>
+        <main className={css.main}>
+          <section className={css["main-article"]}></section>
+          <section className={css["more-articles"]}></section>
         </main>
-        <aside className="article-suggestions"></aside>
+        <aside className={css["articles-aside"]}></aside>
       </div>
     </React.Fragment>
   );

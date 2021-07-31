@@ -9,7 +9,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
   ],
   module: {
     rules: [
@@ -23,13 +23,7 @@ module.exports = {
               modules: true,
             },
           },
-          { loader: "css-modules-typescript-loader" },
         ],
-        include: path.join(__dirname, "src/components"),
-      },
-      {
-        test: /\.(css|scss)$/i,
-        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(js|jsx)?$/,

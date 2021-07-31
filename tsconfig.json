@@ -6,7 +6,6 @@
     "module": "ES6",
     "moduleResolution": "node",
     "strict": true,
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "noImplicitAny": true,
     "jsx": "react",
     "isolatedModules": true,

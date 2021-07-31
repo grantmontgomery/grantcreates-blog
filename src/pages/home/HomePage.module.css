@@ -1,4 +1,4 @@
-main {
+.main {
   height: fit-content;
   display: flex;
   flex-flow: column nowrap;
@@ -12,10 +12,14 @@ main {
   flex-flow: row nowrap;
 }
 
-.article-suggestions {
+.articles-aside {
   width: 30%;
   position: relative;
-  height: 100%;
+}
+
+.more-articles {
+  height: 1000px;
+  width: 100%;
 }
 
 section {
