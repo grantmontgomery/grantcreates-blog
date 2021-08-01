@@ -18,8 +18,27 @@
 }
 
 .moreArticles {
-  height: 1000px;
+  /* height: 1000px; */
   width: 100%;
+}
+
+.loadingLine {
+  height: 3px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: -15px;
+}
+
+.loadingLine::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, transparent, #61dbfb, transparent);
+  width: 100%;
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 100%;
 }
 
 section {
@@ -28,7 +47,19 @@ section {
 
 .topArticle {
   height: 500px;
+  margin-bottom: 10px;
+  position: relative;
   color: white;
   font-family: ObjektivMk2;
-  background: #0f2027;
+  background: #203a43;
+}
+
+@keyframes loading {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(100%);
+  }
 }
