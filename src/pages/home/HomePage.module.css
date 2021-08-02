@@ -19,6 +19,9 @@
 
 .moreArticles {
   /* height: 1000px; */
+  display: flex;
+  height: fit-content;
+  flex-flow: column nowrap;
   width: 100%;
 }
 
@@ -46,8 +49,8 @@ section {
 }
 
 .topArticle {
-  height: 500px;
-  margin-bottom: 10px;
+  height: 450px;
+  margin-bottom: 35px;
   position: relative;
   color: white;
   font-family: ObjektivMk2;
