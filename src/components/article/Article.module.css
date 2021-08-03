@@ -1,4 +1,4 @@
-.articleLink {
+.articleWrapper {
   display: block;
   position: relative;
   height: 150px;
@@ -15,11 +15,16 @@
   height: 100%;
   object-fit: contain;
   display: flex;
+  /* animation-name: loading;
+  animation-duration: 1s; */
+  animation-iteration-count: infinite;
   justify-content: center;
+  animation-direction: alternate-reverse;
   align-items: center;
   width: 25%;
   background: #2c5363;
 }
+
 img {
   width: 100%;
   height: auto;
@@ -27,4 +32,52 @@ img {
 }
 
 .linksWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 75%;
+}
+
+.userLink > p {
+  margin: 0;
+  height: 25px;
+  display: block;
+  width: 150px;
+  background: #2c5363;
+  margin-left: 10px;
+}
+
+.userLink {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  height: 45px;
+  margin-left: 5px;
+}
+
+.articleLink {
+  height: 105px;
+  width: auto;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.articleLink > h3 {
+  margin: 0;
+}
+
+.iconWrapper {
+  object-fit: contain;
+  background: #2c5363;
+  height: 35px;
+  width: 35px;
+  border-radius: 35px;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
